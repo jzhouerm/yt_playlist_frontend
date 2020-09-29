@@ -12,8 +12,8 @@ class PlaylistCard extends React.Component {
             <>
                 <h1>Playlist Show Page</h1>
                 <NavLink to={`/playlists/${this.props.playlist.id}`}>
-                    <p>{this.props.playlist.videos}</p>
-                    <p>Video Link</p>
+                    <p>{this.props.playlist.videos[0].name}</p>
+                    {/* <p>Video Link</p> */}
 
                 </NavLink>
             </>
