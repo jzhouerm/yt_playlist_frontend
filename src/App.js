@@ -1,29 +1,46 @@
 import React from 'react';
 import './App.css';
-import Home from './Components/Home/Home'
+import MyLibrary from './Components/MyLibrary/MyLibrary'
 import { Route, Switch } from 'react-router-dom'
 import PlaylistsContainer from './Components/playlist_index/PlaylistsContainer';
+import Navbar from './Components/Navbar/Navbar'
+import VideoShow from './Components/video_show/VideoShow'
 
 class App extends React.Component {
 
   state ={
-    playlistArray: []
+    userObj: [],
+    passedObj: []
   }
 
   componentDidMount(){                                     
-    fetch("http://localhost:3000/playlists")                
+    fetch("http://localhost:3000/users/1/")                
     .then(resp => resp.json())                             
-    .then(playlists => this.setState({playlistArray: playlists})) 
+    .then(userObj => this.setState({userObj: userObj})) 
+  }
+
+  clickHandler = (props) => {
+    console.log("Hello", props)
+    this.setState({ passedObj: props})
   }
 
   render(){
-    console.log("inside app", this.state.playlistArray)
       return (
         <>
-        {/* add nav bar here */}
+        <Navbar />
         <Switch>
-          <Route exact path="/home" render={() => <Home />} /> 
-          <Route path="/playlists" render={() => <PlaylistsContainer playlists={this.state.playlistArray} />} /> 
+          <Route path="/my_playlists" render={() => 
+              <PlaylistsContainer 
+                  userObj={this.state.userObj} 
+                  clickHandler={this.clickHandler}/>} /> 
+
+          <Route exact path="/playlists/video_show" render={() => 
+              <VideoShow userObj={this.state.userObj} videoShowPage={this.state.passedObj}
+                  />} /> 
+
+
+
+          <Route exact path="/my_library" render={() => <MyLibrary userObj={this.state.userObj} />} />
         </Switch>
 
         </>

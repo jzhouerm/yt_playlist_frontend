@@ -5,42 +5,28 @@ import PlaylistCard from './PlaylistCard'
 class PlaylistsContainer extends React.Component {
 
     playlists = () => {
-       return this.props.playlists.map(playlist => <PlaylistCard key={playlist.id} playlist={playlist}/>)
+        return this.props?.userObj?.playlists?.map(playlist => 
+            <PlaylistCard key={playlist.id} playlist={playlist} clickHandler={this.props.clickHandler}/>)
     }
-
+    
     render(){
-        console.log("inside playlistContainer :" ,this.props.playlists)
+        console.log(this.props)
+        
         return(
             <>
-            {this.props.playlists.length === 0 ? <h1>Loading...</h1> : 
-
-                <>
-                    <Switch>
-                        <Route path='/playlists/:id' render={({ match }) => {
-                            let id = parseInt(match.params.id)
-                            let foundPlaylist = this.props.playlists.find(playlist => playlist.id === id)
-                            console.log("found playlist", foundPlaylist)     //search through playlists for id entered by user's path
-                            return <PlaylistCard playlist={foundPlaylist}/>
-                        }}/>
-
-                        <Route path='/playlists' render={() => {
-                            return (
-            
-                                <div>
+                {!!this.props.userObj == false ? <h1>Loading...</h1> : 
+                    <>
+                            <div>
+                                <h1>Playlist Show Page</h1>
+                            </div>
+                            <div>
                                 {this.playlists()}
-                                </div>
-            
-                            )
-                        }}/>
-                    </Switch>
-                
-                </>
-            }   
+                            </div>
+        
+                    </>
+                }
+        
             </> 
-
-
-
-
         )
     }
 }

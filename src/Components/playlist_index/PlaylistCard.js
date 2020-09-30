@@ -1,31 +1,23 @@
 import React from 'react'
+import { Route, Switch } from 'react-router-dom'
 import { NavLink } from 'react-router-dom'
 
 
 class PlaylistCard extends React.Component {
 
-
+    
     render(){
-        console.log("inside playlistCard ", this.props.playlist)
-        // debugger
         return (
-            <>
-                <h1>Playlist Show Page</h1>
-                <NavLink to={`/playlists/${this.props.playlist.id}`}>
-                    <p>{this.props.playlist.videos[0].name}</p>
-                    {/* <p>Video Link</p> */}
-
-                </NavLink>
-            </>
+                <div><a href="/playlists/video_show" onClick={() => this.props.clickHandler(this.props)}>
+                        {this.props.playlist.name}</a><br /></div>
         )
     }
-
 }
 
 export default PlaylistCard
 
 /* 
-ln 14 - Cannot read property of 'id' of undefined, the object is rendering twice with different 
+Cannot read property of 'id' of undefined, the object is rendering twice with different 
 info, first time with componentDidMount which doesn't have api info, need to set up conditionals in 
 PlaylistsContainer
 */
