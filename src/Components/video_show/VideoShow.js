@@ -1,19 +1,26 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+// import React from 'react'
+// import { NavLink } from 'react-router-dom'
 
 
-class VideoShow extends React.Component {
+// class VideoShow extends React.Component {
 
 
-    render(){
-        debugger
-        return (
-            <>
-                <h1>Video Show</h1>
-            </>
-        )
-    }
+//     render(){
+//         // debugger
+//         console.log(this.props.playlist)
+//         render(){
+//             console.log("playlistCard props: ", this.props)
+//             return (
+//                 <NavLink to={`/playlists/${this.props.playlist.id}/videos/${this.props.video.id}`}>
+                    
+//                     <p>
+//                     Video Show Page
+//                     </p>
+//                 </NavLink>
+//             )
+//         }
+//     }
 
-}
+// }
 
-export default VideoShow
+// export default VideoShow

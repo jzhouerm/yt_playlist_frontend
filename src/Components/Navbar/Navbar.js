@@ -30,7 +30,7 @@ class Navbar extends React.Component {
           >My Library</NavLink>
 
           <NavLink
-            to="/my_playlists"
+            to="/playlists"
             exact
             style={link}
             activeStyle={{
