@@ -1,0 +1,15 @@
+body {
+    padding: 40px;
+    /* background-color: #2f2f2f; */
+}
+
+.playlist-cont {
+    padding-top: 20px;
+    background-color:white;
+    opacity: .7;
+    border-radius: 15px;
+}
+
+/* .playlist-cont:hover {
+    background-color: grey;
+} */

@@ -6,7 +6,8 @@ const link = {
     width: '100px',
     padding: '12px',
     margin: '0 6px 6px',
-    background: '#FF0000',
+    background: '#a40000',
+    // background: '#FF0000',
     textDecoration: 'none',
     color: 'white',
   }
@@ -46,6 +47,15 @@ class Navbar extends React.Component {
               background: 'gray'
             }}
           >Add New Video</NavLink>
+
+          <NavLink
+            to="/add_new_playlist"
+            exact
+            style={link}
+            activeStyle={{
+              background: 'gray'
+            }}
+          >Add New Playlist</NavLink>
         </div>
       )
     }

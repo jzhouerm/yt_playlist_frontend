@@ -1,6 +1,11 @@
 import React from 'react'
 import { Route, Switch, NavLink, Link } from 'react-router-dom'
+import "./PlaylistCard.css"
 
+// const link = {
+//     background: '#d3d3d3',
+//     textDecoration: 'none'
+//   }
 
 class PlaylistCard extends React.Component {
 
@@ -8,17 +13,14 @@ class PlaylistCard extends React.Component {
         playlistID: null
     }
 
-    // clickHandler = () => {
-    //     this.setState({playlistID : this.props.playlist.id})
-    // }
-
+    // video = this.props?.videos?.find(el => el.id === parseInt(this.props.match.params))
 
     render(){
         console.log("playlistCard props: ", this.props)
+        // console.log("Inside PlaylistCard - This is the selected video: ", this.video)
         return (
-            <NavLink to={`/playlists/${this.props.playlist.id}`}>
-                
-                <p>
+            <NavLink to={`/playlists/${this.props.playlist.id}`} >
+                <p className="playlist-cards" >
                 {this.props.playlist.name}
                 </p>
             </NavLink>

@@ -1,0 +1,20 @@
+.video-ul {
+    display:grid;
+    margin: 20px;
+    padding: 20px;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    padding: 10px;
+    height: 90px;
+    
+}
+
+a {
+    border: 2px solid white;
+    text-align:center;
+    border-radius: 15px;
+}
+
+.video-titles {
+    font-size: 25px;
+}
