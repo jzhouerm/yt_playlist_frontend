@@ -29,7 +29,7 @@ class Navbar extends React.Component {
               style={link}
               /* add prop for activeStyle */
               activeStyle={{
-                background: 'black'
+                background: 'gray'
               }}
             >My Library</NavLink>
 
