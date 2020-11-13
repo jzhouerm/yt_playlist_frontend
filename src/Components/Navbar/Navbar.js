@@ -59,14 +59,6 @@ class Navbar extends React.Component {
                 background: 'gray'
               }}
             >Add New Playlist</NavLink>
-                        <NavLink
-              to="/add_new_playlist"
-              exact
-              style={link}
-              activeStyle={{
-                background: 'gray'
-              }}
-            >Add New Playlist</NavLink>
           </div>
           <br/>
           <br/>
