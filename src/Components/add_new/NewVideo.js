@@ -54,7 +54,7 @@ export default class NewVideo extends Component {
                             {this.playlistName()}
                         </select>                
                     <p>
-                        <input className="form-button" type="submit" />
+                        {/* <input className="form-button" type="submit" /> */}
                     </p>
                     
                     
