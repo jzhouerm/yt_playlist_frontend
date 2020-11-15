@@ -44,9 +44,7 @@ export default class NewVideo extends Component {
                 {this.props?.userObj?.playlists ?
                 <>
                     <br />
-                    <br />
-                    <br />
-
+                    
                 <h2 class="page-title">New Video:</h2>
                 <form class="new-form" onSubmit={this.VsubmitHandler}>
                     <br />
