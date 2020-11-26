@@ -1,5 +1,4 @@
 import React from 'react'
-
 import VideoNoteCard from './VideoNoteForm-in-progress'
 
 
