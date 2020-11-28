@@ -22,6 +22,6 @@ class VideoShow extends React.Component {
             )
         }
     }
-d
+
 
 export default VideoShow
