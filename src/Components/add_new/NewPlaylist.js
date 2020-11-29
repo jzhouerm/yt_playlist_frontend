@@ -25,7 +25,6 @@ export default class NewPlaylist extends Component {
                 <br/>
                 <br/>
                 <br/>
-                <br/>
 
                 <h2 class="page-title">New playlist:</h2>
                 <form class="new-form" onSubmit={this.PLsubmitHandler}>
