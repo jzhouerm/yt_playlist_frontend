@@ -22,8 +22,7 @@ export default class NewPlaylist extends Component {
                 {this.props?.userObj?.playlists ?
                 <>
                 <br/>
-                <br/>
-
+                
                 <h2 class="page-title">New playlist:</h2>
                 <form class="new-form" onSubmit={this.PLsubmitHandler}>
                 <h2>Playlist name:</h2>
